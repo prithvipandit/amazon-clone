@@ -1,0 +1,167 @@
+.navbar {
+  background-color: #131921;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+.header__option {
+  display: flex;
+
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: white;
+}
+.header__optionLineOne {
+  font-size: 10px;
+}
+.header__optionLineTwo {
+  font-size: 13px;
+  font-weight: 800;
+  margin-top: -27px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  max-width: 1500px;
+}
+
+.nav-logo {
+  color: #f5b921;
+  align-items: center;
+  margin-left: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  flex-grow: 1;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  text-align: center;
+  margin-right: 2rem;
+}
+
+.nav-links {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  height: 100%;
+  border-bottom: 3px solid transparent;
+}
+.fa-code {
+  margin-left: 1rem;
+}
+
+.nav-item {
+  line-height: 40px;
+  margin-right: 1rem;
+  text-align: center;
+}
+
+.nav-item:after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 0;
+
+  background: transparent;
+  transition: width 0.7s ease, background-color 0.5s ease;
+}
+
+.nav-icon {
+  display: none;
+}
+.img__AmazonLogo {
+  width: 100px;
+  object-fit: contain;
+  margin: 0 20px;
+  margin-top: 18px;
+  margin-left: 80px;
+}
+
+.header__optionBasket {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  margin-right: 60px;
+  margin-left: -25px;
+}
+
+.header__basketCount {
+  margin: -7px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #cd9042;
+}
+
+@media screen and (max-width: 750px) {
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: 1pxsolid #fff;
+    position: absolute;
+    top: 80px;
+    left: -110%;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+  .nav-item {
+    margin-right: 120px !important;
+  }
+
+  .nav-logo {
+    margin-left: 60px;
+  }
+
+  .img__AmazonLogo {
+    margin-top: 13px;
+    margin-left: 5px;
+  }
+
+  .nav-menu.active {
+    background: #131921;
+
+    top: 60px;
+    left: 0px;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+  .nav-item .active {
+    color: #ffdd40;
+    border: none;
+  }
+  .nav-links {
+    padding: 1.5rem;
+    width: 100%;
+    display: table;
+  }
+
+  .nav-icon {
+    display: block;
+    left: 27px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #cd9042;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  .header__optionBasket {
+    margin-right: 30px;
+  }
+}
